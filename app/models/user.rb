@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
+	require 'httparty'
 
-	after_save { :find_long_lat }
+	after_create :find_long_lat
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
