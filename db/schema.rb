@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20141006184825) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.integer  "zipcode"
+    t.integer  "zipcode",                             null: false
     t.float    "longitude"
     t.float    "latitude"
     t.datetime "created_at"
