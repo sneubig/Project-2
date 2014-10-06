@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get 'weather/index'
 
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
