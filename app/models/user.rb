@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
   	self.latitude = raw_data["results"][0]["geometry"]["location"]["lat"]
   	self.save
   end
+
+  def find_weather
+  	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
+  	temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
+  end
 end
