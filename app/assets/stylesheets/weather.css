@@ -1,6 +1,7 @@
 html, body{
 	margin: 0 auto;
 	width: 100%;
+	height: 100%;
 }
 
 p{
@@ -10,7 +11,8 @@ p{
 header{
 	width: 100%;
 	height: 10%;
-	background-color: gray;
+	background-color: #FFF;
+	border-bottom: 1px solid #000;
 }
 
 .logo{
@@ -46,7 +48,7 @@ header{
 .wrapper{
   height: 80%;
   width: 100%;
-  background-color: blue;
+  background-color: #6EBFF5;
   margin: 0;
 }
 
@@ -55,11 +57,13 @@ header{
   margin-right: 10%;
   width: 80%;
   height: 100%;
-  background-color: #fff;
+  background-color: #6EBFF5;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 } 
 
 .temp{
-	background-color: yellow;
+	background-color: #6EBFF5;
 	height: 60%;
 }
 .temp p{
@@ -72,9 +76,13 @@ header{
 footer {
   height: 10%;
   width: 100%;
-  background-color: red;
+  background-color: #000;
+  border-top: 1px solid #FFF;
 }
 
 footer p{
 	margin: 0;
+	text-align: center;
+	font-size: 2em;
+	color: #FFF;
 }
