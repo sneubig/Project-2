@@ -18,7 +18,7 @@ header{
 .logo{
 	float: left;
 	width: 30%;
-	display: inline-block;
+	display: inline-block; 
 	margin-left: 2.5%;
 }
 
