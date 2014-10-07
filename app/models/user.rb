@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
       return puts "Put on more yoga pants"
     else self.prev_max_temp - self.max_temp < 10
       return puts "Take off your sweatshirt"
+    end
   end
   
 end
