@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	require 'HTTParty'
+	include Translate
 
 	after_create :find_long_lat
   # Include default devise modules. Others available are:
@@ -14,7 +15,7 @@ class User < ActiveRecord::Base
   	self.save
   end
 
-  def find_weather
+  def find_min_max
   	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
 
     ##Saves previous temp as yesterday's current temp
@@ -23,10 +24,23 @@ class User < ActiveRecord::Base
 
     ##current temp translated from kelvin / saved
   	self.min_temp = (9/5) * (raw_data["main"]["temp_min"].to_f - 273) + 32
-    self.max_temp = (9/5) * (raw_data["main"]["temp_max"].to_f - 273) + 32  
+    self.max_temp = (9/5) * (raw_data["main"]["temp_max"].to_f - 273) + 32
+    self.temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
 
     self.save
-  end 
+  end
+
+  def find_temp
+  	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
+
+  	self.wind = wind_speed(raw_data["wind"]["speed"])
+
+  	self.temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
+
+  	self.desc = main_desc(raw_data["weather"][0]["main"])
+
+  	self.save
+  end
 
   def compare_weather
     if self.prev_min_temp - self.min_temp > 10
