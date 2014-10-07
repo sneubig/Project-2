@@ -13,17 +13,19 @@
 </header>
 
 <div class="wrapper">
+	<% if user_signed_in? %>
     <div class="side-menu extended">
 	  <div class="sm-options">
 	  		<h2>Home</h2>
 	  		<ul>
-		  		<li>Temp: <%= @user.temp if user_signed_in? %></li>
-		  		<li>Wind: <%= @user.wind if user_signed_in? %></li>
-		  		<li>High: <%= @user.max_temp if user_signed_in? %></li>
-		  		<li>Low: <%= @user.min_temp if user_signed_in? %></li>
+		  		<li>Temp: <%= @user.temp %></li>
+		  		<li>Wind: <%= @user.wind %></li>
+		  		<li>High: <%= @user.max_temp %></li>
+		  		<li>Low: <%= @user.min_temp %></li>
 		  	</ul>
 	  	</div>
 	</div>
+	<% end %>
 
   <div class="content">
 
