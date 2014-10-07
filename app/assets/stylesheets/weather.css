@@ -20,6 +20,7 @@ header{
 	width: 30%;
 	display: inline-block; 
 	margin-left: 2.5%;
+	margin-top: 20px;
 }
 
 .welcome{
@@ -31,6 +32,7 @@ header{
 
 .welcome p{
 	font-size: 20px;
+	margin-top: 20px;
 }
 
 .nav-icon{
@@ -42,6 +44,7 @@ header{
 
 .nav-icon p{
 	float: right;
+	font-size: 2em;
 }
 
 /*********** Body *************/
