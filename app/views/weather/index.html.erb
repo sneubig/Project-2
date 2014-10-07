@@ -8,13 +8,14 @@
 	</div>
 
 	<div class="nav-icon">
-			<p>&equiv;</p>
+		<label for="menu-toggle"><p>&equiv;</p></label>
 	</div>
 </header>
 
 <div class="wrapper">
+  <input type="checkbox" id="menu-toggle">
 	<% if user_signed_in? %>
-    <div class="side-menu extended">
+    <div class="side-menu">
 	  <div class="sm-options">
 	  		<h2>Home</h2>
 	  		<ul>
