@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   	self.save
   end
 
-  def find_min_max
+  def update_min_max
   	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
 
     ##Saves previous temp as yesterday's current temp
