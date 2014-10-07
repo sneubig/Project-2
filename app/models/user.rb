@@ -44,9 +44,9 @@ class User < ActiveRecord::Base
 
   def compare_weather
     if self.prev_min_temp - self.min_temp > 10
-      return puts "Put on more yoga pants"
+      self.cold = true
     else self.prev_max_temp - self.max_temp < 10
-      return puts "Take off your sweatshirt"
+      self.hot = true
     end
   end
 end
