@@ -30,6 +30,10 @@ module Translate
       return "cloudy"
     when "Clear"
       return "clear"
+    when "Rain"
+    	return "rainy"
+    when "Drizzle"
+    	return "drizzling"
     else
       return main.downcase
     end
