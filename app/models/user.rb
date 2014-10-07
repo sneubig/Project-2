@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	require 'httparty'
+	require 'HTTParty'
 
 	after_create :find_long_lat
   # Include default devise modules. Others available are:
@@ -18,5 +18,7 @@ class User < ActiveRecord::Base
   def find_weather
   	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
   	temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
+
+    
   end
 end
