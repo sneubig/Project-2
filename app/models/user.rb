@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
     number = "+1#{user.cell}"
     text_body = "Hey there"
 
-    @client = Twilio::REST::Client.new account_sid, auth_token
+    @client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
     message = @client.account.messages.create(
       :body =>  text_body,
       :to => number,
