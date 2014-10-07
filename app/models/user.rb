@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   	self.save
   end
 
-  def find_min_max
+  def update_min_max
   	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
 
     ##Saves previous temp as yesterday's current temp
@@ -44,9 +44,9 @@ class User < ActiveRecord::Base
 
   def compare_weather
     if self.prev_min_temp - self.min_temp > 10
-      return puts "Put on more yoga pants"
+      self.cold = true
     else self.prev_max_temp - self.max_temp < 10
-      return puts "Take off your sweatshirt"
+      self.hot = true
     end
   end
 end
