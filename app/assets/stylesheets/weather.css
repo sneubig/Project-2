@@ -102,6 +102,7 @@ header{
 /*********** Side Menu *************/
 
 .side-menu {
+
 	height: 80%;
 	width: 20%;
 	min-width: 200px;
@@ -125,7 +126,6 @@ header{
 }
 
 .sm-options li{
-
 }
 
 :checked + .side-menu{
