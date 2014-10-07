@@ -15,6 +15,9 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+  <div><%= f.label :cell, 'Cell Phone Number' %><br />
+    <%= f.phone_field :cell, :placeholder => "ex. 2021234567" ,autocomplete: "off" %></div>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
