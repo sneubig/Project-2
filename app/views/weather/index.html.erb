@@ -4,10 +4,10 @@
 	</div>
 
 	<div class="welcome">
-		<p>Hello, Liz </p>
+		<p>Hello, <%= @user.email if user_signed_in? %> </p>
 	</div>
-	
-	<div class="nav-icon"> 
+
+	<div class="nav-icon">
 			<p>&equiv;</p>
 	</div>
 </header>
@@ -15,12 +15,12 @@
 <div class="wrapper">
     <div class="side-menu extended">
 	  <div class="sm-options">
+	  		<h2>Home</h2>
 	  		<ul>
-		  		<li>Home</li>
-		  		<li>Temp:</li>
-		  		<li>Wind:</li>
-		  		<li>Clouds:</li>
-		  		<li>High:</li>
+		  		<li>Temp: <%= @user.temp if user_signed_in? %></li>
+		  		<li>Wind: <%= @user.wind if user_signed_in? %></li>
+		  		<li>High: <%= @user.max_temp if user_signed_in? %></li>
+		  		<li>Low: <%= @user.min_temp if user_signed_in? %></li>
 		  	</ul>
 	  	</div>
 	</div>
