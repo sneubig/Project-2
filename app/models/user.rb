@@ -49,5 +49,6 @@ class User < ActiveRecord::Base
       return puts "Take off your sweatshirt"
     end
   end
-
 end
+
+

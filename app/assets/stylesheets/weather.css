@@ -7,6 +7,7 @@ html, body{
 p{
 	margin: 0;
 }
+
 /*********** Header *************/
 header{
 	width: 100%;
@@ -48,10 +49,18 @@ header{
 }
 
 /*********** Body *************/
+
+
 .wrapper{
+  background-image: url('rainy.jpg');
+  background-repeat:no-repeat;
+  background-position:center center;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
   height: 80%;
   width: 100%;
-  background-color: #6EBFF5;
   margin: 0;
 }
 
@@ -60,15 +69,14 @@ header{
   margin-right: 10%;
   width: 80%;
   height: 100%;
-  background-color: #6EBFF5;
   border-left: 1px solid white;
   border-right: 1px solid white;
 } 
 
 .temp{
-	background-color: #6EBFF5;
 	height: 60%;
 }
+
 .temp p{
 	color: blue;
 	font-size: 5em;

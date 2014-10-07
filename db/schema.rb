@@ -36,9 +36,7 @@ ActiveRecord::Schema.define(version: 20141007151724) do
     t.integer  "max_temp"
     t.integer  "prev_min_temp"
     t.integer  "prev_max_temp"
-    t.integer  "temp"
-    t.string   "desc"
-    t.string   "wind"
+    t.string   "cell"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
