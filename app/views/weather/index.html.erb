@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="welcome">
-		<p>Hello, <%= @user.email if user_signed_in? %> </p>
+		<p>Hello<%= ", " + @user.email if user_signed_in? %> </p>
 	</div>
 
 	<div class="nav-icon">
