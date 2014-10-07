@@ -82,6 +82,17 @@ header{
 	font-size: 5em;
 }
 
+/*********** Side Menu *************/
+
+.side-menu{
+	height: 100%;
+	width: 20%;
+	z-index: 2;
+	position: relative;
+	float: right;
+	background: green;
+	border-left: 1px solid white;
+}
 
 /*********** Footer *************/
 footer {
