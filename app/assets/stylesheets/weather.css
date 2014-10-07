@@ -15,10 +15,10 @@ html, body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-  font-family: 'Questrial', sans-serif;
+    font-family: 'Questrial', sans-serif;
 }
 
-p{
+p, h1{
 	margin: 0;
 }
 
@@ -110,6 +110,7 @@ header{
 	left: 100%;
 	background-image: url(http://images.all-free-download.com/images/graphiclarge/black_texture_texture_background_07_hd_pictures_169900.jpg);
 	background-size: cover;
+	opacity: 0.9;
 }
 
 .sm-options{
@@ -117,15 +118,12 @@ header{
 	position: relative;
 	top: 10%;
 	font-size: 1.4em;
+	opacity: 1.0;
 }
 
 .sm-options p{
 	text-align: center;
 	font-size: 1.5em;
-}
-
-.sm-options li{
-
 }
 
 :checked + .side-menu{
@@ -146,9 +144,9 @@ footer {
   border-top: 1px solid #FFF;
 }
 
-footer p{
-	margin: 0;
+#sign_in{
+	margin: 0 auto;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1em;
 	color: #FFF;
 }
