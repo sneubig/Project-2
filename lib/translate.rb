@@ -12,7 +12,7 @@ module Translate
   	when 29...39
   		"Moderate Breeze"
   	when 39...49
-  		"Gresh Breeze"
+  		"Fresh Breeze"
   	when 49...74
   		"Strong Wind"
   	when 74...117
