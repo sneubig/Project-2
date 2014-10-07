@@ -69,7 +69,7 @@ header{
 
 
 .wrapper{
-  background-image: url('rainy.jpg');
+  background-image: url(http://oceanfronthawaii.us/images/backgrounds/background_light_blue.jpg);
   background-repeat:no-repeat;
   background-position:center center;
   -o-background-size: 100% 100%, auto;
@@ -88,6 +88,8 @@ header{
   height: 100%;
   border-left: 1px solid white;
   border-right: 1px solid white;
+  background-image: url(http://oceanfronthawaii.us/images/backgrounds/background_light_blue.jpg);
+  background-size: cover;
 } 
 
 .temp{
@@ -96,7 +98,7 @@ header{
 
 .temp p{
 	color: blue;
-	font-size: 5em;
+	font-size: 4em;
 }
 
 /*********** Side Menu *************/
@@ -108,9 +110,19 @@ header{
 	z-index: 2;
 	position: relative;
 	float: right;
-	background: green;
+	background: rgba(0,0,255,0.6);
 	border-left: 1px solid white;
-  display: none;
+}
+
+.sm-options li{
+	color: white;
+}
+
+/********* Toggle Effects *********/
+
+.extended {
+
+	display: inline-block;
 }
 
 /************ Footer **************/
