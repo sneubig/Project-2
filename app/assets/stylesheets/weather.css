@@ -74,6 +74,22 @@ header{
 	font-size: 5em;
 }
 
+/*********** SVG *************/
+
+
+.paper1{
+	text-align: center;
+	width: 10%;
+	margin: 0 auto;
+}
+
+path.cloud{
+	fill: lightblue;
+	text-align: center;
+	width: 100%;
+}
+
+
 
 /*********** Footer *************/
 footer {
