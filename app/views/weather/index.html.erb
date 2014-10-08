@@ -1,18 +1,20 @@
-<header>
-	<div class="logo">
-		<p>logo</p>
-	</div>
+<% if user_signed_in? %>
 
-	<div class="welcome">
-		<p>Hello<%= ", " + @user.email if user_signed_in? %> </p>
-		<p>
-	</div>
+	<header>
+		<div class="logo">
+			<p>logo</p>
+		</div>
 
-	<div class="nav-icon">
-		<label for="menu-toggle"><p>&equiv;</p>
-		</label>
-	</div>
-</header>
+		<div class="welcome">
+			<p>Hello<%= ", " + @user.email %> </p>
+			<p>
+		</div>
+
+		<div class="nav-icon">
+			<label for="menu-toggle"><p>&equiv;</p>
+			</label>
+		</div>
+	</header>
 
 <div class="wrapper">
 	<input type="checkbox" id="menu-toggle">
@@ -30,28 +32,44 @@
 	</div>
 	<% end %>
 
-  <div class="content">
+	  <div class="content">
 
-    <div class="temp">
-    	<p> Temp: <%= @user.temp if user_signed_in? %> </p>
-    	<p> Location: <%= @user.zipcode if user_signed_in? %> </p>
-    </div>
+	    <div class="temp">
+	    	<p> Temp: <%= @user.temp %> </p>
+	    	<p> Location: <%= @user.zipcode %> </p>
+	    </div>
 
-  </div>
+	  </div>
 
-</div>
+	</div>
 
-<footer>
-	<button class="login">
-		<% if user_signed_in? %>
+	<footer>
+		<button class="login">
 	  		<li>
-	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
 	  		</li>
-		<% else %>
-	  		<li>
-	  			<%= link_to('Login', new_user_session_path)  %>
-	  		</li>
-		<% end %>
-	</button>
+		</button>
 
-</footer>
+	</footer>
+
+<% else %>
+	
+	<header>
+		<div class="logo">
+			<p>logo</p>
+		</div>
+	</header>
+
+	<div class="wrapper wel_wrapper">
+		<button class="login wel_signin">
+			<li>
+			  	<%= link_to('Login/Signup', new_user_session_path)  %>
+			</li>
+		</button>
+	</div>
+
+	<footer class="wel_footer">
+	</footer>
+
+
+<% end %>
