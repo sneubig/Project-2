@@ -2,18 +2,24 @@ class User < ActiveRecord::Base
 	require 'HTTParty'
 	include Translate
 
-	after_create :find_long_lat, :update_min_max, :find_temp
+	after_create :find_location, :update_min_max, :find_temp
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def find_long_lat
+  def find_location
   	raw_data = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{self.zipcode}&key=#{Rails.application.secrets.google_api_key}")
   	self.longitude = raw_data["results"][0]["geometry"]["location"]["lng"]
   	self.latitude = raw_data["results"][0]["geometry"]["location"]["lat"]
+
+    timezone_data = HTTParty.get("http://api.timezonedb.com/?lat=#{self.latitude}&lng=#{self.longitude}&format=json&key=2BUF6C3Z4JZL")
+    timezone = (timezone_data["gmtOffset"].to_i / 3200) if timezone_data["status"] == "OK"
+
+    self.timezone = timezone
   	self.save
   end
+
 
   def update_min_max
   	raw_data = HTTParty.get("http://api.openweathermap.org/data/2.5/weather?lat=#{self.latitude}&lon=#{self.longitude}")
@@ -48,7 +54,15 @@ class User < ActiveRecord::Base
     else self.max_temp - self.prev_max_temp > 10
       self.hot = true
     end
+    self.save
   end
+
+  def update_weather
+    self.update_min_max
+    self.find_temp
+    self.compare_weather
+  end
+
 end
 
 
