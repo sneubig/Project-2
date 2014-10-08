@@ -30,7 +30,6 @@ class Message
     end
   end
 
-<<<<<<< HEAD
   def test_message
     users = User.where(email: "brandonjyuhas@gmail.com")
     send_message(x, "Testestestest")
@@ -39,12 +38,14 @@ class Message
   #Find movies using the Rotten Tomatos API
   def sunny_movies_message
 
-    address = URI("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?limit=16&country=us&apikey=" + "Rails.application.secrets.tomato_key")
+    address = URI("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?apikey=" + "Rails.application.secrets.tomato_key")
     http = Net::HTTP.new address.host, address.port
     request = Net::HTTP::Get.new address.request_uri
     response = http.request(request)
     result = JSON.parse(response.body)
+    #puts result
     movies = result["movies"]
+
     chosenMovies = []
 
     movies.each do |movie|
@@ -67,8 +68,6 @@ class Message
     end
   end
 
-=======
->>>>>>> 5c1ae67860b17b8f17d33c8e603df2cf1ccdfceb
   def send_message(user, text)
     require 'rubygems'
     require 'twilio-ruby'
