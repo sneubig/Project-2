@@ -1,21 +1,73 @@
 *{
 	box-sizing:border-box;
-	/* adds animation for all transitions */
-	-webkit-transition: .50s ease-in-out;
-	-moz-transition: .50s ease-in-out;
-	-o-transition: .50s ease-in-out;
-	transition: .50s ease-in-out;
-	-webkit-text-size-adjust: none;
-	margin: 0;
-	padding: 0;
+	/* adds animation for all transitions */ 
+	-webkit-transition: .50s ease-in-out; 
+	-moz-transition: .50s ease-in-out; 
+	-o-transition: .50s ease-in-out; 
+	transition: .50s ease-in-out; 
+	-webkit-text-size-adjust: none; 
+	margin: 0; 
+	padding: 0; 
 }
+
+/**** DEVISE ****/
+body {
+	    background-image: url('http://s22.postimg.org/7ewialej5/1351618289610.jpg');
+
+}
+
+.containerDE {
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+ 
+.devise {
+  position: relative;
+  margin: 9.375em auto;
+  padding: .8em;
+  width: 19.375em;
+}
+
+.devise:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+ 
+.devise h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+}
+ 
+.devise input[type=email], .devise input[type=password] {
+  width: 17.250em;
+}
+
+/**** DEVISE END ****/
+
 
 html, body{
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
 }
 
@@ -34,7 +86,7 @@ header{
 .logo{
 	float: left;
 	width: 30%;
-	display: inline-block;
+	display: inline-block; 
 	margin-left: 2.5%;
 	margin-top: 20px;
 }
@@ -81,10 +133,6 @@ header{
   margin: 0;
 }
 
-.wel_wrapper{
-	height: 100%;
-}
-
 .content {
   margin-left: 10%;
   margin-right: 10%;
@@ -92,7 +140,7 @@ header{
   height: 100%;
   border-left: 1px solid white;
   border-right: 1px solid white;
-}
+} 
 
 .temp{
 	height: 60%;
@@ -147,20 +195,11 @@ footer {
   border-top: 1px solid #FFF;
 }
 
-.wel_footer{
-	display: none;
-}
-
 .login{
 	list-style-type: none;
 	text-decoration: none;
 	background-color: white;
 	margin-left: 49%;
-}
-
-.wel_signin{
-	position: relative;
-	margin-top: 20%;
 }
 
 
