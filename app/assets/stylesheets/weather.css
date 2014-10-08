@@ -1,13 +1,13 @@
 *{
 	box-sizing:border-box;
 	/* adds animation for all transitions */ 
-	-webkit-transition: .25s ease-in-out; 
-	-moz-transition: .25s ease-in-out; 
-	-o-transition: .25s ease-in-out; 
-	transition: .25s ease-in-out; 
+	-webkit-transition: .50s ease-in-out; 
+	-moz-transition: .50s ease-in-out; 
+	-o-transition: .50s ease-in-out; 
+	transition: .50s ease-in-out; 
+	-webkit-text-size-adjust: none; 
 	margin: 0; 
 	padding: 0; 
-	-webkit-text-size-adjust: none; 
 }
 
 html, body{
@@ -65,7 +65,6 @@ header{
 /*	opacity: 0;
 */}
 
-
 /*********** Body *************/
 
 
@@ -103,7 +102,6 @@ header{
 /*********** Side Menu *************/
 
 .side-menu {
-
 	height: 80%;
 	width: 20%;
 	min-width: 200px;
@@ -139,16 +137,15 @@ header{
 /************ Footer **************/
 footer {
   height: 10%;
-  padding-top: 1%;
+  padding-top: 1.8%;
   width: 100%;
-  background-color: #000;
+  background-color: #404040;
   border-top: 1px solid #FFF;
 }
 
 #sign_in p{
 	margin: 0 auto;
 	text-align: center;
-	text-decoration: none;
-	font-size: 1em;
+	font-size: 1.3em;
 	color: #FFF;
 }
