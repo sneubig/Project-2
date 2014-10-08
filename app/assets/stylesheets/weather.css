@@ -14,9 +14,9 @@ html, body{
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-  padding: 0;
 	overflow: hidden;
-  font-family: 'Questrial', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }
 
 p, h1{
@@ -27,7 +27,7 @@ p, h1{
 header{
 	width: 100%;
 	height: 10%;
-	background-color: #01A9DB;
+	background-color: #FFF;
 	border-bottom: 1px solid #000;
 }
 
@@ -47,8 +47,8 @@ header{
 }
 
 .welcome p{
-	font-size: 2em;
-	padding-top: 1%;
+	font-size: 20px;
+	margin-top: 20px;
 }
 
 .nav-icon{
@@ -68,8 +68,8 @@ header{
 /*********** Body *************/
 
 
-#wrapper{
-  background-image: url("cloudy.jpg");
+.wrapper{
+  background-image: url(http://oceanfronthawaii.us/images/backgrounds/background_light_blue.jpg);
   background-repeat:no-repeat;
   background-position:center center;
   -o-background-size: 100% 100%, auto;
@@ -79,66 +79,53 @@ header{
   height: 80%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
 }
 
-.wel_wrapper{
+/*.wel_wrapper{
 	height: 100%;
+	width: 100%;
+	margin: 0;
+	background-image: url(http://martybugs.net/gallery/photos/IMG_A04623_1000.jpg);
+	background-size: cover;
+
+}*/
+
+#background{
+	height: 100%;
+	width: 100%;
+	background-image: url(http://martybugs.net/gallery/photos/IMG_A04623_1000.jpg);
+	background-size: cover;
 }
 
 .content {
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
   width: 80%;
   height: 100%;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .temp{
-  clear: both;
-  text-align: center;
-	height: 40%;
-  padding-top: 5%;
-}
-
-.svg {
-  text-align: center;
-  height: 40%;
-  margin-top: 10%;
-  border: 1px solid #fff;
-  background-color: #000;
+	height: 60%;
 }
 
 .temp p{
-	color: #fff;
-	font-size: 3em;
-  -webkit-text-fill-color: black; 
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+	color: blue;
+	font-size: 5em;
 }
 
 /*********** Side Menu *************/
 
 .side-menu {
-	height: 95%;
+	height: 80%;
 	width: 20%;
 	min-width: 200px;
-  padding: 10px;
 	z-index: 2;
 	position: absolute;
 	left: 100%;
-  opacity: 0.75;
-  line-height: 2;
 	background-color: #404040;
 	background-size: cover;
-  font-family: 'Questrial', sans-serif;
-}
-
-.side-menu h2 {
-  text-align: center;
-  font-size: 2.5em;
-}
-
-.side-menu ul li {
-  font-size: 1.5em;
 }
 
 :checked + .side-menu{
@@ -166,32 +153,22 @@ header{
 /************ Footer **************/
 footer {
   height: 10%;
-  padding-top: 1%;
+  padding-top: 1.8%;
   width: 100%;
-  background-color: #01A9DB;
+  background-color: #404040;
   border-top: 1px solid #FFF;
 }
 
 .wel_footer{
 	display: none;
+	height: 0;
 }
 
 .login{
 	list-style-type: none;
-	background-color: #fff;
-  padding: 0.5%;
-  border-radius: 5px;
+	text-decoration: none;
+	background-color: white;
 	margin-left: 49%;
-}
-
-.login a {
-  font-size: 1.5em;
-  text-decoration: none;
-  color: #000;
-}
-
-.login a:hover {
-  color: red;
 }
 
 .wel_signin{
