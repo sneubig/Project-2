@@ -18,3 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+every :hour do
+  # Updates users and sends relevant messages
+  rake "daily:update_users"
+  rake "daily:send_messages"
+end
