@@ -1,13 +1,13 @@
 *{
 	box-sizing:border-box;
 	/* adds animation for all transitions */ 
-	-webkit-transition: .25s ease-in-out; 
-	-moz-transition: .25s ease-in-out; 
-	-o-transition: .25s ease-in-out; 
-	transition: .25s ease-in-out; 
+	-webkit-transition: .50s ease-in-out; 
+	-moz-transition: .50s ease-in-out; 
+	-o-transition: .50s ease-in-out; 
+	transition: .50s ease-in-out; 
+	-webkit-text-size-adjust: none; 
 	margin: 0; 
 	padding: 0; 
-	-webkit-text-size-adjust: none; 
 }
 
 html, body{
@@ -15,10 +15,11 @@ html, body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-  font-family: 'Questrial', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 }
 
-p{
+p, h1{
 	margin: 0;
 }
 
@@ -61,9 +62,8 @@ header{
 .nav-icon p{
 	float: right;
 	font-size: 2em;
-/*	opacity: 0;*/
-}
-
+/*	opacity: 0;
+*/}
 
 /*********** Body *************/
 
@@ -102,22 +102,31 @@ header{
 /*********** Side Menu *************/
 
 .side-menu {
-
 	height: 80%;
 	width: 20%;
 	min-width: 200px;
 	z-index: 2;
 	position: absolute;
 	left: 100%;
-	background-image: url(http://images.all-free-download.com/images/graphiclarge/black_texture_texture_background_07_hd_pictures_169900.jpg);
+	background-color: #404040;
 	background-size: cover;
 }
+
+:checked + .side-menu{
+  transform: translateX(-100%);
+}
+
+#menu-toggle {
+  display: none;
+}
+
 
 .sm-options{
 	color: white;
 	position: relative;
 	top: 10%;
-	font-size: 1.4em;
+	font-size: 1.0em;
+	opacity: 1.0;
 }
 
 .sm-options p{
@@ -125,30 +134,20 @@ header{
 	font-size: 1.5em;
 }
 
-.sm-options li{
-}
-
-:checked + .side-menu{
-  background-image:url(http://images.all-free-download.com/images/graphiclarge/black_texture_texture_background_07_hd_pictures_169900.jpg);
-  transform: translateX(-100%)
-}
-
-#menu-toggle {
-  display: none;
-}
-
 /************ Footer **************/
 footer {
   height: 10%;
-  padding-top: 1%;
+  padding-top: 1.8%;
   width: 100%;
-  background-color: #000;
+  background-color: #404040;
   border-top: 1px solid #FFF;
 }
 
-footer p{
-	margin: 0;
-	text-align: center;
-	font-size: 2em;
-	color: #FFF;
+.login{
+	list-style-type: none;
+	text-decoration: none;
+	background-color: white;
+	margin-left: 49%;
 }
+
+
