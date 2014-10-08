@@ -31,13 +31,24 @@
 
   <div class="content">
     <div class="temp">
-    	<p>Temp: <%= @user.temp %> </p>
-    	<p> Location: </p>
+    	<p> Temp: <%= @user.temp if user_signed_in? %> </p>
+    	<p> Location: <%= @user.zipcode if user_signed_in? %> </p>
     </div>
 
   </div>
 </div>
 
 <footer>
-	<a id="sign_in" href="#" style="text-decoration:none"><p>Signed in?</p></a>
+	<button class="login">
+		<% if user_signed_in? %>
+	  		<li>
+	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+	  		</li>
+		<% else %>
+	  		<li>
+	  			<%= link_to('Login', new_user_session_path)  %>  
+	  		</li>
+		<% end %>
+	</button>
+
 </footer>
