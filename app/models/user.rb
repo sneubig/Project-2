@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	require 'HTTParty'
 	include Translate
 
-	after_create :find_long_lat
+	after_create :find_long_lat, :update_min_max, :find_temp
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   def compare_weather
     if self.prev_min_temp - self.min_temp > 10
       self.cold = true
-    else self.prev_max_temp - self.max_temp < 10
+    else self.max_temp - self.prev_max_temp > 10
       self.hot = true
     end
   end
