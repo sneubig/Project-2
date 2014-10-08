@@ -35,9 +35,10 @@ class Message
     send_message(x, "Testestestest")
   end
 
-   #Find movies using the Rotten Tomatos API
+  #Find movies using the Rotten Tomatos API
   def sunny_movies_message
-    address = URI("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?limit=16&country=us&apikey=" + ENV["tomato_key"])
+
+    address = URI("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?limit=16&country=us&apikey=" + "Rails.application.secrets.tomato_key")
     http = Net::HTTP.new address.host, address.port
     request = Net::HTTP::Get.new address.request_uri
     response = http.request(request)
