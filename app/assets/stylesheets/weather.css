@@ -11,7 +11,7 @@
 }
 
 /**** DEVISE ****/
-body {
+.devisesessions, .usersregistrations, .devisepasswords {
   background-image: url('http://wallalay.com/wp-content/uploads/2014/09/Gradient-Background-17.jpg');
 
 }
