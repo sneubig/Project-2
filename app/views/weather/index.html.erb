@@ -1,23 +1,27 @@
-<header>
-	<div class="logo">
-		<p>logo</p>
-	</div>
+<% if user_signed_in? %>
 
-	<div class="welcome">
-		<p>Hello<%= ", " + @user.email if user_signed_in? %> </p>
-	</div>
+	<header>
+		<div class="logo">
+			<p>logo</p>
+		</div>
 
-	<div class="nav-icon">
-		<label for="menu-toggle"><p>&equiv;</p></label>
-	</div>
-</header>
+		<div class="welcome">
+			<p>Hello<%= ", " + @user.email %> </p>
+			<p>
+		</div>
+
+		<div class="nav-icon">
+			<label for="menu-toggle"><p>&equiv;</p>
+			</label>
+		</div>
+	</header>
 
 <div class="wrapper">
-  <input type="checkbox" id="menu-toggle">
+	<input type="checkbox" id="menu-toggle">
 	<% if user_signed_in? %>
-    <div class="side-menu">
+    <div class="side-menu extended">
 	  <div class="sm-options">
-	  		<p>Current Conditions</p>
+	  		<h2>Home</h2>
 	  		<ul>
 		  		<li>Temp: <%= @user.temp %></li>
 		  		<li>Wind: <%= @user.wind %></li>
@@ -28,14 +32,44 @@
 	</div>
 	<% end %>
 
-  <div class="content">
-    <div class="temp">
-    	<h1> Hello </h1>
-    </div>
+	  <div class="content">
 
-  </div>
-</div>
+	    <div class="temp">
+	    	<p> Temp: <%= @user.temp %> </p>
+	    	<p> Location: <%= @user.zipcode %> </p>
+	    </div>
 
-<footer>
-	<p> Location </p>
-</footer>
+	  </div>
+
+	</div>
+
+	<footer>
+		<button class="login">
+	  		<li>
+	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
+	  		</li>
+		</button>
+
+	</footer>
+
+<% else %>
+	
+	<header>
+		<div class="logo">
+			<p>logo</p>
+		</div>
+	</header>
+
+	<div class="wrapper wel_wrapper">
+		<button class="login wel_signin">
+			<li>
+			  	<%= link_to('Login/Signup', new_user_session_path)  %>
+			</li>
+		</button>
+	</div>
+
+	<footer class="wel_footer">
+	</footer>
+
+
+<% end %>

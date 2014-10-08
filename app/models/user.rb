@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
 
   	self.temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
 
-  	self.desc = main_desc(raw_data["weather"][0]["main"])
+  	self.desc = main_desc(raw_data["weather"][0]["id"], raw_data["weather"][0]["main"])
 
   	self.save
   end
