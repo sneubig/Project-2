@@ -146,7 +146,7 @@ header{
 /************ Footer **************/
 footer {
   height: 10%;
-  padding-top: 1.8%;
+  padding-top: 1%;
   width: 100%;
   background-color: #404040;
   border-top: 1px solid #FFF;
@@ -159,8 +159,20 @@ footer {
 .login{
 	list-style-type: none;
 	text-decoration: none;
-	background-color: white;
+	background-color: #fff;
+  padding: 0.5%;
+  border-radius: 5px;
 	margin-left: 49%;
+}
+
+.login a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.login a:hover {
+  color: red;
 }
 
 .wel_signin{
