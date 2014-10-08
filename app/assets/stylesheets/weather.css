@@ -68,14 +68,8 @@ html, body{
 	height: 100%;
   padding: 0;
 	overflow: hidden;
-<<<<<<< HEAD
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-=======
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
->>>>>>> feebf89ae866bdde7d904f9438305b723685956d
-}
 
 p, h1{
 	margin: 0;
@@ -120,8 +114,7 @@ header{
 .nav-icon p{
 	float: right;
 	font-size: 2em;
-/*	opacity: 0;
-*/}
+}
 
 /*********** Body *************/
 
@@ -145,13 +138,7 @@ header{
   margin-right: 10%;
   width: 80%;
   height: 100%;
-<<<<<<< HEAD
 }
-=======
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-} 
->>>>>>> feebf89ae866bdde7d904f9438305b723685956d
 
 .temp{
   text-align: center;
