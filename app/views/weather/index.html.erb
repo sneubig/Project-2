@@ -5,6 +5,7 @@
 
 	<div class="welcome">
 		<p>Hello<%= ", " + @user.email if user_signed_in? %> </p>
+		<p>
 	</div>
 
 	<div class="nav-icon">
@@ -14,11 +15,11 @@
 </header>
 
 <div class="wrapper">
-  <input type="checkbox" id="menu-toggle">
+	<input type="checkbox" id="menu-toggle">
 	<% if user_signed_in? %>
-    <div class="side-menu">
+    <div class="side-menu extended">
 	  <div class="sm-options">
-	  		<p>Current Conditions</p>
+	  		<h2>Home</h2>
 	  		<ul>
 		  		<li>Temp: <%= @user.temp %></li>
 		  		<li>Wind: <%= @user.wind %></li>
@@ -30,14 +31,32 @@
 	<% end %>
 
   <div class="content">
+
     <div class="temp">
+<<<<<<< HEAD
     <!-- 	<p>Temp: <%#= @user.temp %> </p> -->
     	<p> Location: </p>
+=======
+    	<p> Temp: <%= @user.temp if user_signed_in? %> </p>
+    	<p> Location: <%= @user.zipcode if user_signed_in? %> </p>
+>>>>>>> 5c1ae67860b17b8f17d33c8e603df2cf1ccdfceb
     </div>
 
   </div>
+
 </div>
 
 <footer>
-	<a id="sign_in" href="#" style="text-decoration:none"><p>Signed in?</p></a>
+	<button class="login">
+		<% if user_signed_in? %>
+	  		<li>
+	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+	  		</li>
+		<% else %>
+	  		<li>
+	  			<%= link_to('Login', new_user_session_path)  %>
+	  		</li>
+		<% end %>
+	</button>
+
 </footer>

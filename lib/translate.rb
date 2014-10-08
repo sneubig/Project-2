@@ -24,18 +24,32 @@ module Translate
   	end
   end
 
-  def main_desc(main)
+  def main_desc(main, desc)
   	case main
-  	when "Clouds"
-      return "cloudy"
-    when "Clear"
-      return "clear"
-    when "Rain"
-    	return "rainy"
-    when "Drizzle"
-    	return "drizzling"
+  	when 200..210
+      return "Light Thunderstorm"
+    when 211
+      return "Thunderstorm"
+    when 212..232
+    	return "Heavy Thunderstorm"
+    when 300..321
+    	return "Drizzle"
+    when 500
+      return "Light Rain"
+    when 501
+      return "Rain"
+    when 502..504
+      return "Heavy Rain"
+    when 511
+      return "Freezing Rain"
+    when 520..531
+      return "Shower"
+    when 600
+      return "Light Snow"
+    when 601..622
+      return "Snow"
     else
-      return main.downcase
+      return desc
     end
   end
 end

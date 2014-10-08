@@ -30,6 +30,7 @@ class Message
     end
   end
 
+<<<<<<< HEAD
   def test_message
     users = User.where(email: "brandonjyuhas@gmail.com")
     send_message(x, "Testestestest")
@@ -66,6 +67,8 @@ class Message
     end
   end
 
+=======
+>>>>>>> 5c1ae67860b17b8f17d33c8e603df2cf1ccdfceb
   def send_message(user, text)
     require 'rubygems'
     require 'twilio-ruby'
