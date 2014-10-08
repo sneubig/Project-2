@@ -12,7 +12,7 @@
 
 /**** DEVISE ****/
 body {
-	    background-image: url('http://s22.postimg.org/7ewialej5/1351618289610.jpg');
+  background-image: url('http://wallalay.com/wp-content/uploads/2014/09/Gradient-Background-17.jpg');
 
 }
 
@@ -45,18 +45,43 @@ body {
 .devise h1 {
   margin: -20px -20px 21px;
   line-height: 40px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1.5em;
   color: #555;
   text-align: center;
-  text-shadow: 0 1px white;
-  background: #f3f3f3;
+  text-shadow: .01em .01em .2em white;
+  background-color: #5a99a8;
   border-bottom: 1px solid #cfcfcf;
   border-radius: 3px 3px 0 0;
 }
  
 .devise input[type=email], .devise input[type=password] {
-  width: 17.250em;
+  width: 17.7em;
+}
+
+.loginDE {
+	margin: 1em 0 1em 6em;
+	padding:.2em .4em;
+	border-radius: .5em;
+	background-color: #fff;
+	opacity: 20%;
+	border: .1em black;
+}
+
+.loginDE a:hover{
+	border: 30px solid red;
+}
+
+.signupDE {
+	color: #000;
+	text-decoration: none;
+	margin-top: 1em;
+}
+
+.forgotDE {
+	color: #000;
+	text-decoration: none;
+	margin-bottom: 20px;
+	float: right;
 }
 
 /**** DEVISE END ****/
