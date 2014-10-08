@@ -5,19 +5,19 @@
 
 	<div class="welcome">
 		<p>Hello<%= ", " + @user.email if user_signed_in? %> </p>
+		<p>
 	</div>
 
 	<div class="nav-icon">
-		<label for="menu-toggle"><p>&equiv;</p></label>
+			<p>&equiv;</p>
 	</div>
 </header>
 
 <div class="wrapper">
-  <input type="checkbox" id="menu-toggle">
 	<% if user_signed_in? %>
-    <div class="side-menu">
+    <div class="side-menu extended">
 	  <div class="sm-options">
-	  		<p>Current Conditions</p>
+	  		<h2>Home</h2>
 	  		<ul>
 		  		<li>Temp: <%= @user.temp %></li>
 		  		<li>Wind: <%= @user.wind %></li>
@@ -29,11 +29,13 @@
 	<% end %>
 
   <div class="content">
+
     <div class="temp">
-    	<h1> Hello </h1>
+
     </div>
 
   </div>
+
 </div>
 
 <footer>
