@@ -150,38 +150,120 @@ header{
   /*  border-left: 1px solid white;
     border-right: 1px solid white;*/ }
 
+/*********** SVG Animations *************/
+.svg {
+  width: 20%;
+  height: 20%;
+  border: 1px solid black;
+  position: relative;
+  top: 10%;
+  margin: 0 auto;
+  text-align: center; }
+
+/********* Grey Cloud with Lightning Animation ****************/
+.cloud-style-grey {
+  fill: #878891; }
+
+#Layer_cloud1 {
+  width: 60%; }
+
+.cloud1 {
+  position: relative;
+  top: 20px;
+  z-index: 2;
+  animation: cloud 50s linear infinite;
+  -webkit-animation: cloud 10s linear infinite; }
+
+@-webkit-keyframes cloud {
+  0%, 100% {
+    left: 0%; }
+
+  50% {
+    left: 20%; } }
+#Layer_lightning {
+  width: 35%; }
+
+.lightning {
+  position: relative;
+  top: -2%;
+  left: 2%;
+  -webkit-animation: lightning 2s linear infinite;
+  animation: lightning 2s linear infinite; }
+
+@-webkit-keyframes lightning {
+  0%, 100% {
+    transform: translateY(0);
+    left: 4%;
+    opacity: 0; }
+
+  25% {
+    transform: translateY(5px);
+    opacity: 0; }
+
+  50% {
+    transform: translateY(10px);
+    left: 5%;
+    opacity: 100; }
+
+  75% {
+    transform: translateY(5px);
+    opacity: 0; } }
+/********* Sun with Blue-Cloud Animation ****************/
+.sun {
+  position: relative;
+  left: -320px;
+  top: -410px; }
+
+#Layer_sun {
+  width: 300%; }
+
+.cloud-style-blue {
+  fill: #64D6F5; }
+
+#Layer_bluecloud {
+  width: 60%; }
+
+.cloud2 {
+  position: relative;
+  top: -1210px;
+  z-index: 2;
+  animation: cloud 50s linear infinite;
+  -webkit-animation: cloud 10s linear infinite; }
+
+@-webkit-keyframes cloud {
+  0%, 100% {
+    left: 0%; }
+
+  50% {
+    left: 3%;
+    fill: #878891; } }
+/*********** Temp *************/
 .temp {
-  height: 60%; }
+  height: 60%;
+  position: relative;
+  top: 15%; }
+
+.temp h2 {
+  font-size: 7em;
+  margin: 0;
+  text-align: center; }
 
 .temp p {
-  color: blue;
-  font-size: 5em; }
+  font-size: 4em;
+  text-align: center; }
 
 /*********** Side Menu *************/
 .side-menu {
-<<<<<<< HEAD
   height: 80%;
   width: 20%;
   min-width: 200px;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
+  top: 4.375em;
   left: 100%;
   background-color: #404040;
-  background-size: cover; }
-=======
-	height: 95%;
-	width: 20%;
-	min-width: 200px;
-  padding: 10px;
-	z-index: 2;
-	position: absolute;
-	left: 100%;
-  opacity: 0.75;
-  line-height: 2;
-	background-color: #404040;
-	background-size: cover;
-  font-family: 'Questrial', sans-serif;
 }
+
 
 .side-menu h2 {
   text-align: center;
@@ -191,24 +273,18 @@ header{
 .side-menu ul li {
   font-size: 1.5em;
 }
->>>>>>> 6a6620e3072d6ab9339ea809e6c7eb3347ad04d7
 
-/*:checked + .side-menu{
-  transform: translateX(-100%);
-}*/
-/*#menu-toggle {
-  display: none;
-}*/
 .sm-options {
   color: white;
   position: relative;
   top: 10%;
   font-size: 1.0em;
   opacity: 1.0; }
-
-.sm-options p {
-  text-align: center;
-  font-size: 1.5em; }
+  .sm-options h2 {
+    padding-left: 10%; }
+  .sm-options ul li {
+    line-height: 2;
+    font-size: 1.5em; }
 
 /************ Footer **************/
 footer {
@@ -220,14 +296,27 @@ footer {
 }
 
 .login {
-  list-style-type: none;
-  text-decoration: none;
-  background-color: white;
-  margin-left: 49%; }
+  margin-left: 45%; }
 
+button {
+  padding: 1%;
+  border-radius: 20%;
+  background-color: #4FBBE0;
+  border-color: #FFF; }
+  button a {
+    text-decoration: none;
+    color: #FFF; }
+
+/************** Media Queries ******************/
+@media all and (max-width: 500px) {
+  .welcome p {
+    font-size: 1em; } }
+@media all and (max-width: 800px) {
+  .temp p {
+    font-size: 3em; } }
 /**** DEVISE ****/
 .devisesessions, .usersregistrations, .devisepasswords {
-  background-image: url("http://wallalay.com/wp-content/uploads/2014/09/Gradient-Background-17.jpg"); }
+  background-image: url("http://s30.postimg.org/8ub308v3l/clouds_vector_wallpaper_2560x1600_1593.jpg"); }
 
 .containerDE {
   display: inline-block;
@@ -239,7 +328,7 @@ footer {
   position: relative;
   margin: 9.375em auto;
   padding: .8em;
-  width: 19.375em; }
+  width: 24.375em; }
 
 .devise:before {
   content: '';
@@ -264,22 +353,20 @@ footer {
   border-radius: 3px 3px 0 0; }
 
 .devise input[type=email], .devise input[type=password] {
-  width: 17.7em; }
+  height: 1.9em;
+  width: 22.5em;
+  border-radius: .5em; }
 
 .loginDER {
-  margin: 1em 0 1em 6em;
-  padding: .2em .4em;
+  margin: 1.5em 0 1em 10.2em;
+  padding: .2em .7em;
   border-radius: .5em;
   background-color: #fff;
-  opacity: 20%;
-  border: .1em black; }
+  opacity: 20%; }
 
 .loginDE {
   text-decoration: none;
   color: black; }
-
-.loginDE a:hover {
-  border: 30px solid red; }
 
 .signupDE {
   color: #000;
@@ -292,22 +379,40 @@ footer {
   margin-bottom: 20px;
   float: right; }
 
+.emailDE {
+  color: white;
+  text-indent: .2em;
+  text-shadow: .05em .02em 0 black; }
+
+.passwordDE {
+  color: white;
+  text-indent: .2em;
+  text-shadow: .05em .02em 0 black;
+  border-radius: .5em; }
+
+.zipcodeDE {
+  width: 22.5em;
+  text-indent: .2;
+  border-radius: .5em; }
+
 /**** DEVISE END ****/
 /**** EXPERIBURG ****/
 .menu_opener {
   display: none; }
 
-.menu_opener:checked ~ .barre_hamburger {
-  opacity: 0; }
+/** These are the animations for everything**/
 .menu_opener:checked ~ .side-menu {
   transform: translateX(-100%); }
 .menu_opener:checked ~ .menu_opener_label:after {
   transform: rotate(45deg);
-  margin-top: 1.2em; }
+  margin-top: 1.35em; }
 .menu_opener:checked ~ .menu_opener_label:before {
   transform: rotate(-45deg);
-  margin-top: 1.2em; }
+  margin-top: 1.35em; }
+.menu_opener:checked ~ .menu_opener_label .barre_hamburger {
+  opacity: 0; }
 
+<<<<<<< HEAD
 .login{
 	list-style-type: none;
 	background-color: #fff;
@@ -332,9 +437,9 @@ footer {
 }
 
 .menu_opener_label {
-  background: #F9821B;
-  width: 2.9em;
-  height: 2.9em;
+  background: #4FBBE0;
+  width: 3em;
+  height: 3em;
   margin-top: .6em;
   display: block;
   cursor: pointer;
@@ -345,33 +450,40 @@ footer {
   .menu_opener_label:after {
     position: absolute;
     display: block;
-    margin-top: .75em;
+    margin-top: .85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em;
+    height: .25em;
+    border-radius: 1em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .menu_opener_label:before {
     position: absolute;
     display: block;
-    margin-top: 1.75em;
+    margin-top: 1.85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em;
+    height: .25em;
+    border-radius: 1em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
 
+/** Middle Bar **/
 .barre_hamburger {
+  position: relative;
+  display: block;
+  margin-top: 1.35em;
+  margin-right: .8em;
   width: 1.4em;
-  height: .3em;
-  position: absolute;
-  top: 1.85em;
-  left: 75.6em;
+  height: .25em;
   background: #000;
+  border-radius: 1em;
+  float: right;
+  cursor: pointer;
   z-index: 20;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }

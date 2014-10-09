@@ -10,7 +10,7 @@
       <%= f.email_field :email, autofocus: true %></div><br />
 
       <div class="zipcodeDE"><%= f.label :zipcode %><br />
-      <%= f.text_field :zipcode, autofocus: true, :style => "width: 17.7em" %></div><br />
+      <%= f.text_field :zipcode, autofocus: true, :style => "width: 22.5em" %></div><br />
 
       <div class="passwordDE"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
         <%= f.password_field :password, autocomplete: "off" %></div><br />
@@ -19,7 +19,7 @@
         <%= f.password_field :password_confirmation, autocomplete: "off" %></div><br />
 
       <div><%= f.label :cell, :style => "width: 17.7em;" 'Cell Phone Number' %><br />
-        <%= f.phone_field :cell, :placeholder => "ex. 2021234567" ,autocomplete: "off", :style => "width: 17.7em" %></div>
+        <%= f.phone_field :cell, :placeholder => "ex. 2021234567" ,autocomplete: "off", :style => "width: 22.5em" %></div>
 
       <div class=""><%= f.submit "Sign up" %></div><br />
     <% end %>
