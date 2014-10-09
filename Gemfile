@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Use whenever for task scheduling
+gem 'whenever', :require => false
+
 # Use httparty for api requests
 gem 'httparty'
 
