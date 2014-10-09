@@ -11,15 +11,29 @@
 		</div>
 
 		<div class="nav-icon">
-			<label for="menu-toggle"><p>&equiv;</p>
-			</label>
+
+			<label for="menu-toggle">  	
+
+				  <label for="menu_opener_id" class="menu_opener_label"></label>
+				  
+				  <div class="barre_hamburger"></div>
+
+			</label> 
+
 		</div>
+		
 	</header>
 
 <div class="wrapper">
-	<input type="checkbox" id="menu-toggle">
+
+<!-- 	<input type="checkbox" id="menu-toggle">   -->
+
+		<input type="checkbox" id="menu_opener_id" class="menu_opener">
+		</input> 
+
+
 	<% if user_signed_in? %>
-    <div class="side-menu extended">
+    <div class="side-menu">
 	  <div class="sm-options">
 	  		<h2>Home</h2>
 	  		<ul>
