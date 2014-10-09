@@ -14,34 +14,37 @@
 
 			<label for="menu-toggle">  	
 
-				  <label for="menu_opener_id" class="menu_opener_label"></label>
-				  
-				  <div class="barre_hamburger"></div>
+				<input type="checkbox" id="menu_opener_id" class="menu_opener">
 
+				  <label for="menu_opener_id" class="menu_opener_label">
+				  	
+				  	<div class="barre_hamburger"></div>
+
+				  </label>
+
+
+				<% if user_signed_in? %>
+					    <div class="side-menu">
+						  <div class="sm-options">
+						  		<h2>Conditions:</h2>
+						  		<ul>
+							  		<li>Temp: <%= @user.temp %></li>
+							  		<li>Wind: <%= @user.wind %></li>
+							  		<li>High: <%= @user.max_temp %></li>
+							  		<li>Low: <%= @user.min_temp %></li>
+							  	</ul>
+							  	<div class="logout">
+	  								<%= link_to('Logout', destroy_user_session_path, :method => :delete, :style => "text-decoration: none; color: black")%>
+								</div>
+						  	</div>
+						</div>
+				    <% end %>
+				</input> 
 			</label> 
-
-		</div>
-		
+		</div>	
 	</header>
 
 <div class="wrapper">
-
-	<input type="checkbox" id="menu_opener_id" class="menu_opener"></input> 
-
-	<% if user_signed_in? %>
-    <div class="side-menu">
-	  <div class="sm-options">
-	  		<h2>Conditions:</h2>
-	  		<ul>
-		  		<li>Temp: <%= @user.temp %></li>
-		  		<li>Wind: <%= @user.wind %></li>
-		  		<li>High: <%= @user.max_temp %></li>
-		  		<li>Low: <%= @user.min_temp %></li>
-		  	</ul>
-	  	</div>
-	</div>
-	<% end %>
-
 	  <div class="content">
 
 	<!-- SVG Animations -->
@@ -126,10 +129,8 @@
 	    	<h2> <%= @user.temp %>&deg; </h2>
 	    	<p> Location: <%= @user.zipcode %> </p>
 	    </div>
-
-	  </div>
-
 	</div>
+<<<<<<< HEAD
 
 	<footer>
 		<button class="login">
@@ -137,25 +138,24 @@
 		</button>
 
 	</footer>
+=======
+</div>
+>>>>>>> 9e1cb19d3af5eafd6a735b88de9246e04e1b0fbf
 
 <% else %>
 	
-	<header>
-		<div class="logo">
-			<p>logo</p>
-		</div>
-	</header>
-
-	<div class="wrapper wel_wrapper">
-		<button class="login wel_signin">
-			<li>
-			  	<%= link_to('Login/Signup', new_user_session_path)  %>
-			</li>
-		</button>
+<header>
+	<div class="logo">
+		<p>logo</p>
 	</div>
+</header>
 
-	<footer class="wel_footer">
-	</footer>
-
+<div class="wrapper wel_wrapper">
+	<button class="login wel_signin">
+		
+		  	<%= link_to('Login/Signup', new_user_session_path)  %>
+		
+	</button>
+</div>
 
 <% end %>

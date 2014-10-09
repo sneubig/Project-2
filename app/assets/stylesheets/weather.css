@@ -59,7 +59,7 @@ header {
   -moz-background-size: 100% 100%, auto;
   -webkit-background-size: 100% 100%, auto;
   background-size: 100% 100%, auto;
-  height: 80%;
+  height: 100%;
   width: 100%;
   margin: 0; }
 
@@ -136,7 +136,7 @@ header {
   top: -410px; }
 
 #Layer_sun {
-  width: 300%; }
+  width: 100%; }
 
 .cloud-style-blue {
   fill: #64D6F5; }
@@ -175,53 +175,47 @@ header {
 
 /*********** Side Menu *************/
 .side-menu {
-  height: 80%;
+  height: 100%;
   width: 20%;
   min-width: 200px;
   z-index: 3;
   position: absolute;
+  top: 4.375em;
   left: 100%;
   background-color: #404040;
   background-size: cover;
   opacity: 0.75; }
 
-/*:checked + .side-menu{
-  transform: translateX(-100%);
-}*/
-/*#menu-toggle {
-  display: none;
-}*/
 .sm-options {
   color: white;
   position: relative;
   top: 10%;
   font-size: 1.0em;
   opacity: 1.0; }
-  .sm-options h2 {
-    padding-left: 10%; }
-  .sm-options ul li {
-    line-height: 2;
-    font-size: 1.5em; }
+
+h2 {
+  padding-left: 10%; }
+
+ul li {
+  line-height: 2;
+  font-size: 1.5em; }
 
 /************ Footer **************/
-footer {
-  height: 10%;
-  padding-top: 1%;
-  width: 100%;
-  background-color: #404040;
-  border-top: 1px solid #FFF; }
-
 .login {
-  margin-left: 45%; }
+  margin: 17em 0 0 30em;
+  padding: .5em 6em;
+  background-color: #fff;
+  opacity: 20%;
+  color: black; }
 
-button {
-  padding: 1%;
-  border-radius: 20%;
-  background-color: #4FBBE0;
-  border-color: #FFF; }
-  button a {
-    text-decoration: none;
-    color: #FFF; }
+.logout {
+  margin: 11.5em 0em 0em 0em;
+  padding: 1em 4.6em 1em;
+  background-color: #fff;
+  opacity: 20%;
+  color: black;
+  border: none;
+  font-size: 1.3em; }
 
 /************** Media Queries ******************/
 @media all and (max-width: 500px) {
@@ -232,7 +226,7 @@ button {
     font-size: 3em; } }
 /**** DEVISE ****/
 .devisesessions, .usersregistrations, .devisepasswords {
-  background-image: url("http://wallalay.com/wp-content/uploads/2014/09/Gradient-Background-17.jpg"); }
+  background-image: url("http://s30.postimg.org/8ub308v3l/clouds_vector_wallpaper_2560x1600_1593.jpg"); }
 
 .containerDE {
   display: inline-block;
@@ -244,7 +238,7 @@ button {
   position: relative;
   margin: 9.375em auto;
   padding: .8em;
-  width: 19.375em; }
+  width: 24.375em; }
 
 .devise:before {
   content: '';
@@ -269,22 +263,20 @@ button {
   border-radius: 3px 3px 0 0; }
 
 .devise input[type=email], .devise input[type=password] {
-  width: 17.7em; }
+  height: 1.9em;
+  width: 22.5em;
+  border-radius: .5em; }
 
 .loginDER {
-  margin: 1em 0 1em 6em;
-  padding: .2em .4em;
+  margin: 1.5em 0 1em 10.2em;
+  padding: .2em .7em;
   border-radius: .5em;
   background-color: #fff;
-  opacity: 20%;
-  border: .1em black; }
+  opacity: 20%; }
 
 .loginDE {
   text-decoration: none;
   color: black; }
-
-.loginDE a:hover {
-  border: 30px solid red; }
 
 .signupDE {
   color: #000;
@@ -297,26 +289,44 @@ button {
   margin-bottom: 20px;
   float: right; }
 
+.emailDE {
+  color: white;
+  text-indent: .2em;
+  text-shadow: .05em .02em 0 black; }
+
+.passwordDE {
+  color: white;
+  text-indent: .2em;
+  text-shadow: .05em .02em 0 black;
+  border-radius: .5em; }
+
+.zipcodeDE {
+  width: 22.5em;
+  text-indent: .2;
+  border-radius: .5em; }
+
 /**** DEVISE END ****/
 /**** EXPERIBURG ****/
 .menu_opener {
   display: none; }
 
-.menu_opener:checked ~ .barre_hamburger {
-  opacity: 0; }
+/** These are the animations for everything**/
 .menu_opener:checked ~ .side-menu {
   transform: translateX(-100%); }
 .menu_opener:checked ~ .menu_opener_label:after {
   transform: rotate(45deg);
-  margin-top: 1.2em; }
+  margin-top: 1.35em; }
 .menu_opener:checked ~ .menu_opener_label:before {
   transform: rotate(-45deg);
-  margin-top: 1.2em; }
+  margin-top: 1.35em; }
+.menu_opener:checked ~ .menu_opener_label .barre_hamburger {
+  opacity: 0; }
 
+/** Circle + Top + Bottom Bars **/
 .menu_opener_label {
-  background: #F9821B;
-  width: 2.9em;
-  height: 2.9em;
+  background: #4FBBE0;
+  width: 3em;
+  height: 3em;
   margin-top: .6em;
   display: block;
   cursor: pointer;
@@ -327,33 +337,40 @@ button {
   .menu_opener_label:after {
     position: absolute;
     display: block;
-    margin-top: .75em;
+    margin-top: .85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em;
+    height: .25em;
+    border-radius: 1em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .menu_opener_label:before {
     position: absolute;
     display: block;
-    margin-top: 1.75em;
+    margin-top: 1.85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em;
+    height: .25em;
+    border-radius: 1em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
 
+/** Middle Bar **/
 .barre_hamburger {
+  position: relative;
+  display: block;
+  margin-top: 1.35em;
+  margin-right: .8em;
   width: 1.4em;
-  height: .3em;
-  position: absolute;
-  top: 1.85em;
-  left: 75.6em;
+  height: .25em;
   background: #000;
+  border-radius: 1em;
+  float: right;
+  cursor: pointer;
   z-index: 20;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
