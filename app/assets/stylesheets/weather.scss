@@ -242,14 +242,6 @@ font-size: 1.5em;
 
 /************ Footer **************/
 
-.login{
-	margin:17em 0 0 30em;
-	padding:.5em 6em;
-	background-color: #fff;
-	opacity: 20%;
-	color: black;
-}
-
 .logout{
 	margin:11.5em 0em 0em 0em;
 	padding:1em 4.6em 1em;
@@ -458,3 +450,31 @@ font-size: 1.5em;
    -webkit-transition: all .4s ease;
    transition: all .4s ease;
 }
+
+/** SIGN IN **/
+.wel_wrapper {
+    text-align: center;
+    padding-top: 10%;
+  }
+  .wel_wrapper h1 {
+      color: #FFF;
+      font-size: 7em;
+    }
+
+  .wel_signin {
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    background-color: #4FBBE0;
+    text-align: center;
+    border: 1px solid black;
+  }
+
+  button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  button a:hover {
+    color: #000;
+  }
