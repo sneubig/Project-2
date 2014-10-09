@@ -48,9 +48,7 @@ header {
   float: right;
   width: 30%;
   display: block;
-  margin-right: 2.5%;
-  /*	font-size: 1.5em;
-  */ }
+  margin-right: 2.5%; }
 
 /*********** Body *************/
 .wrapper {
@@ -91,12 +89,12 @@ header {
   background-color: #404040;
   background-size: cover; }
 
-:checked + .side-menu {
-  transform: translateX(-100%); }
-
-#menu-toggle {
-  display: none; }
-
+/*:checked + .side-menu{
+  transform: translateX(-100%);
+}*/
+/*#menu-toggle {
+  display: none;
+}*/
 .sm-options {
   color: white;
   position: relative;
@@ -192,6 +190,8 @@ footer {
 
 .menu_opener:checked ~ .barre_hamburger {
   opacity: 0; }
+.menu_opener:checked ~ .side-menu {
+  transform: translateX(-100%); }
 .menu_opener:checked ~ .menu_opener_label:after {
   transform: rotate(45deg);
   margin-top: 1.2em; }

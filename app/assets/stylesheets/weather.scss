@@ -59,8 +59,7 @@ header{
 	width: 30%;
 	display: block;
 	margin-right: 2.5%;
-/*	font-size: 1.5em;
-*/}
+}
 
 /*********** Body *************/
 
@@ -109,13 +108,13 @@ header{
 	background-size: cover;
 }
 
-:checked + .side-menu{
+/*:checked + .side-menu{
   transform: translateX(-100%);
-}
+}*/
 
-#menu-toggle {
+/*#menu-toggle {
   display: none;
-}
+}*/
 
 
 .sm-options{
@@ -232,6 +231,9 @@ footer {
 .menu_opener:checked ~ {
   .barre_hamburger {
   opacity: 0;
+  }
+  .side-menu {
+  	transform: translateX(-100%);
   }
   .menu_opener_label {
     &:after {
