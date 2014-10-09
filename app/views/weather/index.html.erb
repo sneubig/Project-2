@@ -33,6 +33,9 @@
 							  		<li>High: <%= @user.max_temp %></li>
 							  		<li>Low: <%= @user.min_temp %></li>
 							  	</ul>
+							  	<div class="logout">
+	  								<%= link_to('Logout', destroy_user_session_path, :method => :delete, :style => "text-decoration: none; color: black")%>
+								</div>
 						  	</div>
 						</div>
 				    <% end %>
@@ -42,7 +45,6 @@
 	</header>
 
 <div class="wrapper">
-
 	  <div class="content">
 
 	<!-- SVG Animations -->
@@ -128,14 +130,17 @@
 	    	<p> Location: <%= @user.zipcode %> </p>
 	    </div>
 	</div>
-</div>
+<<<<<<< HEAD
 
 	<footer>
 		<button class="login">
 	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
 		</button>
 
-	</footer> 
+	</footer>
+=======
+</div>
+>>>>>>> 9e1cb19d3af5eafd6a735b88de9246e04e1b0fbf
 
 <% else %>
 	
@@ -147,14 +152,18 @@
 
 <div class="wrapper wel_wrapper">
 	<button class="login wel_signin">
-		<li>
+		
 		  	<%= link_to('Login/Signup', new_user_session_path)  %>
-		</li>
+		
 	</button>
 </div>
 
+<<<<<<< HEAD
 <footer class="wel_footer">
 </footer>
 
 
 <% end %>
+=======
+<% end %>
+>>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1

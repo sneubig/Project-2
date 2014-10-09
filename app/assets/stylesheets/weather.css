@@ -59,7 +59,7 @@ header {
   -moz-background-size: 100% 100%, auto;
   -webkit-background-size: 100% 100%, auto;
   background-size: 100% 100%, auto;
-  height: 80%;
+  height: 100%;
   width: 100%;
   margin: 0; }
 
@@ -75,7 +75,6 @@ header {
 .svg {
   width: 20%;
   height: 20%;
-  border: 1px solid black;
   position: relative;
   top: 10%;
   margin: 0 auto;
@@ -136,7 +135,7 @@ header {
   top: -410px; }
 
 #Layer_sun {
-  width: 300%; }
+  width: 100%; }
 
 .cloud-style-blue {
   fill: #64D6F5; }
@@ -175,7 +174,7 @@ header {
 
 /*********** Side Menu *************/
 .side-menu {
-  height: 80%;
+  height: 100%;
   width: 20%;
   min-width: 200px;
   z-index: 3;
@@ -192,31 +191,30 @@ header {
   top: 10%;
   font-size: 1.0em;
   opacity: 1.0; }
-  .sm-options h2 {
-    padding-left: 10%; }
-  .sm-options ul li {
-    line-height: 2;
-    font-size: 1.5em; }
+
+h2 {
+  padding-left: 10%; }
+
+ul li {
+  line-height: 2;
+  font-size: 1.5em; }
 
 /************ Footer **************/
-footer {
-  height: 10%;
-  padding-top: 1%;
-  width: 100%;
-  background-color: #404040;
-  border-top: 1px solid #FFF; }
-
 .login {
-  margin-left: 45%; }
+  margin: 17em 0 0 30em;
+  padding: .5em 6em;
+  background-color: #fff;
+  opacity: 20%;
+  color: black; }
 
-button {
-  padding: 1%;
-  border-radius: 20%;
-  background-color: #4FBBE0;
-  border-color: #FFF; }
-  button a {
-    text-decoration: none;
-    color: #FFF; }
+.logout {
+  margin: 11.5em 0em 0em 0em;
+  padding: 1em 4.6em 1em;
+  background-color: #fff;
+  opacity: 20%;
+  color: black;
+  border: none;
+  font-size: 1.3em; }
 
 /************** Media Queries ******************/
 @media all and (max-width: 500px) {

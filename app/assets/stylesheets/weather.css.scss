@@ -72,7 +72,7 @@ header{
   -moz-background-size: 100% 100%, auto;
   -webkit-background-size: 100% 100%, auto;
   background-size: 100% 100%, auto;
-  height: 80%;
+  height: 100%;
   width: 100%;
   margin: 0;
 }
@@ -91,7 +91,6 @@ header{
 .svg{
   width: 20%;
   height: 20%;
-  border: 1px solid black;
   position: relative;
   top: 10%;
   margin: 0 auto;
@@ -163,7 +162,7 @@ header{
 }
 
 #Layer_sun{
-  width: 300%;
+  width: 100%;
 }
 .cloud-style-blue{
   fill: #64D6F5;
@@ -212,6 +211,7 @@ header{
 /*********** Side Menu *************/
 
 .side-menu {
+<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
   height: 80%;
   width: 20%;
   min-width: 200px;
@@ -221,10 +221,22 @@ header{
   left: 100%;
   background-color: #404040;
   background-size: cover;
+=======
+	height: 100%;
+	width: 20%;
+	min-width: 200px;
+	z-index: 3;
+	position: absolute;
+	top: 4.375em;
+	left: 100%;
+	background-color: #404040;
+	background-size: cover;
+>>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
   opacity: 0.75;
 }
 
 .sm-options{
+<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
   color: white;
   position: relative;
   top: 10%;
@@ -237,30 +249,46 @@ header{
     line-height: 2;
     font-size: 1.5em;
   }
+=======
+	color: white;
+	position: relative;
+	top: 10%;
+	font-size: 1.0em;
+	opacity: 1.0;
+>>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
+}
+
+h2{
+padding-left: 10%;
+}
+
+ul li{
+line-height: 2;
+font-size: 1.5em;
 }
 
 /************ Footer **************/
-footer {
-  height: 10%;
-  padding-top: 1%;
-  width: 100%;
-  background-color: #404040;
-  border-top: 1px solid #FFF;
-}
 
 .login{
+<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
   margin-left: 45%;
+=======
+	margin:17em 0 0 30em;
+	padding:.5em 6em;
+	background-color: #fff;
+	opacity: 20%;
+	color: black;
+>>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
 }
 
-button{
-  padding: 1%;
-  border-radius: 20%;
-  background-color: #4FBBE0;
-  border-color: #FFF;
-  a{
-    text-decoration: none;
-    color: #FFF;
-  }
+.logout{
+	margin:11.5em 0em 0em 0em;
+	padding:1em 4.6em 1em;
+	background-color: #fff;
+	opacity: 20%;
+	color: black;
+	border: none;
+	font-size: 1.3em;
 }
 
 /************** Media Queries ******************/
@@ -269,17 +297,13 @@ button{
   .welcome p{
     font-size: 1em;
   }
-
 }
-
 @media all and (max-width: 800px){
   .temp p{
     font-size: 3em;
   }
   
 }
-
-
 
 /**** DEVISE ****/
 .devisesessions, .usersregistrations, .devisepasswords {
