@@ -130,17 +130,6 @@
 	    	<p> Location: <%= @user.zipcode %> </p>
 	    </div>
 	</div>
-<<<<<<< HEAD
-
-	<footer>
-		<button class="login">
-	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
-		</button>
-
-	</footer>
-=======
-</div>
->>>>>>> 9e1cb19d3af5eafd6a735b88de9246e04e1b0fbf
 
 <% else %>
 	
@@ -151,7 +140,8 @@
 </header>
 
 <div class="wrapper wel_wrapper">
-	<button class="login wel_signin">
+	<h1>Cirrus</h1>
+	<button class="wel_signin">
 		
 		  	<%= link_to('Login/Signup', new_user_session_path)  %>
 		
@@ -159,3 +149,4 @@
 </div>
 
 <% end %>
+
