@@ -174,7 +174,7 @@ header{
 }
 .cloud2{
   position: relative;
-  top: -1210px;
+  top: -600px;
   z-index: 2;
   animation: cloud 50s linear infinite;
   -webkit-animation: cloud 10s linear infinite;
@@ -206,6 +206,7 @@ header{
 .temp p{
   font-size: 4em;
   text-align: center;
+  margin: 0;
 }
 
 

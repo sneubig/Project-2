@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
     timezone = (timezone_data["gmtOffset"].to_i / 3200) if timezone_data["status"] == "OK"
 
     self.timezone = timezone
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n find_location\n\n\n\n\n\n\n\n\n\n\n\n\n"
   	self.save
   end
 
@@ -32,7 +33,7 @@ class User < ActiveRecord::Base
   	self.min_temp = (9/5) * (raw_data["main"]["temp_min"].to_f - 273) + 32
     self.max_temp = (9/5) * (raw_data["main"]["temp_max"].to_f - 273) + 32
     self.temp = (9/5) * (raw_data["main"]["temp"].to_f - 273) + 32
-
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n update_min_max\n\n\n\n\n\n\n\n\n\n\n\n\n"
     self.save
   end
 
@@ -45,6 +46,8 @@ class User < ActiveRecord::Base
 
   	self.desc = main_desc(raw_data["weather"][0]["id"], raw_data["weather"][0]["main"])
 
+    self.weather_code = raw_data["weather"][0]["id"]
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n find_temp \n\n\n\n\n\n\n\n\n\n\n\n\n"
   	self.save
   end
 
@@ -54,10 +57,12 @@ class User < ActiveRecord::Base
     else self.max_temp - self.prev_max_temp > 10
       self.hot = true
     end
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n compare_weather\n\n\n\n\n\n\n\n\n\n\n\n\n"
     self.save
   end
 
   def update_weather
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n update_weather\n\n\n\n\n\n\n\n\n\n\n\n\n"
     self.update_min_max
     self.find_temp
     self.compare_weather
