@@ -163,7 +163,7 @@ footer {
   position: relative;
   margin: 9.375em auto;
   padding: .8em;
-  width: 19.375em;
+  width: 24.375em;
 }
 
 .devise:before {
@@ -191,26 +191,23 @@ footer {
 }
  
 .devise input[type=email], .devise input[type=password] {
-  width: 17.7em;
+  height: 1.9em;
+  width: 22.5em;
+  border-radius: .5em;
 }
 
 .loginDER {
-	margin: 1em 0 1em 6em;
-	padding:.2em .4em;
+	margin: 1.5em 0 1em 10.2em;
+	padding:.2em .7em;
 	border-radius: .5em;
 	background-color: #fff;
 	opacity: 20%;
-	border: .1em black;
 }
 
 .loginDE {
 	text-decoration: none;
 	color: black;
 
-}
-
-.loginDE a:hover{
-	border: 30px solid red;
 }
 
 .signupDE {
@@ -224,6 +221,27 @@ footer {
 	text-decoration: none;
 	margin-bottom: 20px;
 	float: right;
+}
+
+.emailDE {
+	color: white;
+	text-indent: .2em;
+	text-shadow: .05em .02em 0 black;
+}
+
+.passwordDE {
+	color: white;
+	text-indent: .2em;
+	text-shadow: .05em .02em 0 black;
+	border-radius: .5em;
+
+}
+
+.zipcodeDE {
+	width: 22.5em;
+	text-indent: .2;
+	border-radius: .5em;
+
 }
 
 /**** DEVISE END ****/
