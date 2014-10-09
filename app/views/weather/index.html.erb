@@ -14,10 +14,25 @@
 
 			<label for="menu-toggle">  	
 
-				  <label for="menu_opener_id" class="menu_opener_label"></label>
-				  
-				  <div class="barre_hamburger"></div>
+				<input type="checkbox" id="menu_opener_id" class="menu_opener">
 
+				  <label for="menu_opener_id" class="menu_opener_label"></label>
+
+				  <div class="barre_hamburger"></div>
+				    <% if user_signed_in? %>
+					    <div class="side-menu">
+						  <div class="sm-options">
+						  		<h2>Home</h2>
+						  		<ul>
+							  		<li>Temp: <%= @user.temp %></li>
+							  		<li>Wind: <%= @user.wind %></li>
+							  		<li>High: <%= @user.max_temp %></li>
+							  		<li>Low: <%= @user.min_temp %></li>
+							  	</ul>
+						  	</div>
+						</div>
+				    <% end %>
+				 </input> 
 			</label> 
 
 		</div>
@@ -25,26 +40,6 @@
 	</header>
 
 <div class="wrapper">
-
-<!-- 	<input type="checkbox" id="menu-toggle">  
- -->
-		<input type="checkbox" id="menu_opener_id" class="menu_opener">
-		</input> 
-
-
-	<% if user_signed_in? %>
-    <div class="side-menu">
-	  <div class="sm-options">
-	  		<h2>Home</h2>
-	  		<ul>
-		  		<li>Temp: <%= @user.temp %></li>
-		  		<li>Wind: <%= @user.wind %></li>
-		  		<li>High: <%= @user.max_temp %></li>
-		  		<li>Low: <%= @user.min_temp %></li>
-		  	</ul>
-	  	</div>
-	</div>
-	<% end %>
 
 	  <div class="content">
 
