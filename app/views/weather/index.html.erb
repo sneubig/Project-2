@@ -32,53 +32,46 @@
 						  	</div>
 						</div>
 				    <% end %>
-				 </input> 
+				</input> 
 			</label> 
-
-		</div>
-		
+		</div>	
 	</header>
 
 <div class="wrapper">
-
-	  <div class="content">
-
+	<div class="content">
 	    <div class="temp">
 	    	<p> Temp: <%= @user.temp %> </p>
 	    	<p> Location: <%= @user.zipcode %> </p>
 	    </div>
-
-	  </div>
-
 	</div>
+</div>
 
-	<footer>
-		<button class="login">
-	  		<li>
-	  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
-	  		</li>
-		</button>
-
-	</footer>
+<footer>
+	<button class="login">
+  		<li>
+  			<%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
+  		</li>
+	</button>
+</footer>
 
 <% else %>
 	
-	<header>
-		<div class="logo">
-			<p>logo</p>
-		</div>
-	</header>
-
-	<div class="wrapper wel_wrapper">
-		<button class="login wel_signin">
-			<li>
-			  	<%= link_to('Login/Signup', new_user_session_path)  %>
-			</li>
-		</button>
+<header>
+	<div class="logo">
+		<p>logo</p>
 	</div>
+</header>
 
-	<footer class="wel_footer">
-	</footer>
+<div class="wrapper wel_wrapper">
+	<button class="login wel_signin">
+		<li>
+		  	<%= link_to('Login/Signup', new_user_session_path)  %>
+		</li>
+	</button>
+</div>
+
+<footer class="wel_footer">
+</footer>
 
 
 <% end %>

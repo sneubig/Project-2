@@ -201,6 +201,7 @@ footer {
 .menu_opener {
   display: none; }
 
+/** These are the animations for everything**/
 .menu_opener:checked ~ .barre_hamburger {
   opacity: 0; }
 .menu_opener:checked ~ .side-menu {
@@ -212,6 +213,7 @@ footer {
   transform: rotate(-45deg);
   margin-top: 1.35em; }
 
+/** Circle + Top + Bottom Bars **/
 .menu_opener_label {
   background: #4FBBE0;
   width: 3em;
@@ -248,15 +250,16 @@ footer {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
 
+/** Middle Bar **/
 .barre_hamburger {
-  width: 1.4em;
-  height: .25em;
   position: absolute;
   display: block;
-  top: 1.95em;
-  left: 75.55em;
+  margin-top: 1.95em;
+  margin-left: 21.725em;
+  width: 1.4em;
+  height: .25em;
   background: #000;
-  z-index: 20;
   border-radius: 1em;
+  z-index: 20;
   -webkit-transition: all .4s ease;
   transition: all .4s ease; }
