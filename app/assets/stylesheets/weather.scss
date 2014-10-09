@@ -217,20 +217,12 @@ header{
 	min-width: 200px;
 	z-index: 3;
 	position: absolute;
+	top: 4.375em;
 	left: 100%;
 	background-color: #404040;
 	background-size: cover;
   opacity: 0.75;
 }
-
-/*:checked + .side-menu{
-  transform: translateX(-100%);
-}*/
-
-/*#menu-toggle {
-  display: none;
-}*/
-
 
 .sm-options{
 	color: white;
@@ -291,7 +283,7 @@ button{
 
 /**** DEVISE ****/
 .devisesessions, .usersregistrations, .devisepasswords {
-  background-image: url('http://wallalay.com/wp-content/uploads/2014/09/Gradient-Background-17.jpg');
+  background-image: url('http://s30.postimg.org/8ub308v3l/clouds_vector_wallpaper_2560x1600_1593.jpg');
 
 }
 
@@ -306,7 +298,7 @@ button{
   position: relative;
   margin: 9.375em auto;
   padding: .8em;
-  width: 19.375em;
+  width: 24.375em;
 }
 
 .devise:before {
@@ -334,26 +326,23 @@ button{
 }
  
 .devise input[type=email], .devise input[type=password] {
-  width: 17.7em;
+  height: 1.9em;
+  width: 22.5em;
+  border-radius: .5em;
 }
 
 .loginDER {
-	margin: 1em 0 1em 6em;
-	padding:.2em .4em;
+	margin: 1.5em 0 1em 10.2em;
+	padding:.2em .7em;
 	border-radius: .5em;
 	background-color: #fff;
 	opacity: 20%;
-	border: .1em black;
 }
 
 .loginDE {
 	text-decoration: none;
 	color: black;
 
-}
-
-.loginDE a:hover{
-	border: 30px solid red;
 }
 
 .signupDE {
@@ -369,79 +358,110 @@ button{
 	float: right;
 }
 
+.emailDE {
+	color: white;
+	text-indent: .2em;
+	text-shadow: .05em .02em 0 black;
+}
+
+.passwordDE {
+	color: white;
+	text-indent: .2em;
+	text-shadow: .05em .02em 0 black;
+	border-radius: .5em;
+
+}
+
+.zipcodeDE {
+	width: 22.5em;
+	text-indent: .2;
+	border-radius: .5em;
+
+}
+
 /**** DEVISE END ****/
 
 /**** EXPERIBURG ****/
+
 
 .menu_opener {
   display: none;
 }
 
+ /** These are the animations for everything**/
 .menu_opener:checked ~ {
-  .barre_hamburger {
-  opacity: 0;
-  }
+
   .side-menu {
   	transform: translateX(-100%);
   }
   .menu_opener_label {
     &:after {
      transform:rotate(45deg); 
-     margin-top: 1.2em;
+     margin-top: 1.35em;
     }
     &:before {
      transform:rotate(-45deg);
-     margin-top: 1.2em;
+     margin-top: 1.35em;
     }
+    .barre_hamburger {
+	 opacity: 0;
+	}
   }
 }
 
+/** Circle + Top + Bottom Bars **/
 .menu_opener_label {
-  background: #F9821B;
-  width: 2.9em;
-  height: 2.9em;
+  background: #4FBBE0;
+  width: 3em;
+  height: 3em;
   margin-top: .6em;
   display: block;
   cursor: pointer;
   border-radius:50%;
   float: right;
   bottom: 2em;
-
   z-index: 10;
   &:after {
 	position: absolute;
 	display: block;
-    margin-top: .75em;
+    margin-top: .85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em; 
+    height: .25em; 
+    border-radius: 1em;
     -webkit-transition: all .4s ease ;
     transition: all .4s ease ;
   }
   &:before {
   	position: absolute;
     display: block;
-    margin-top: 1.75em;
+    margin-top: 1.85em;
     margin-left: .8em;
     background: #000;
     content: "";
     width: 1.4em;
-    height: .3em;
+    height: .25em;
+    border-radius: 1em;
     -webkit-transition: all .4s ease ;
     transition: all .4s ease ;
   }
 }
 
+/** Middle Bar **/
 .barre_hamburger {
+   position: relative;
+   display: block;
+   margin-top: 1.35em;
+   margin-right: .8em;
    width: 1.4em;
-   height: .3em; 
-   position: absolute;
-   top: 1.85em;
-   left: 75.6em;
-   background: #000; 
+   height: .25em; 
+   background: #000;
+   border-radius: 1em;
+   float: right;
+   cursor: pointer;
    z-index: 20;
-   -webkit-transition: all .4s ease ;
-   transition: all .4s ease ;
+   -webkit-transition: all .4s ease;
+   transition: all .4s ease;
 }
