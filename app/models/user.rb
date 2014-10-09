@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-	require 'HTTParty'
 	include Translate
 
 	after_create :find_location, :update_min_max, :find_temp
