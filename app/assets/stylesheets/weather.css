@@ -42,6 +42,7 @@ html, body{
 	overflow: hidden;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+}
 
 .welcome {
   margin: 0 auto;
@@ -53,7 +54,7 @@ html, body{
 header{
 	width: 100%;
 	height: 10%;
-	background-color: #FFF;
+	background-color: #01A9DB;
 	border-bottom: 1px solid #000;
 }
 
@@ -119,21 +120,29 @@ header{
 }
 
 .content {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 10%;
   width: 80%;
   height: 100%;
 }
 
 .temp{
+  clear: both;
   text-align: center;
-	height: 80%;
-  padding-top: 10%;
+	height: 40%;
+  padding-top: 5%;
+}
+
+.svg {
+  text-align: center;
+  height: 40%;
+  margin-top: 10%;
+  border: 1px solid #fff;
+  background-color: #000;
 }
 
 .temp p{
 	color: #fff;
-	font-size: 5em;
+	font-size: 3em;
   -webkit-text-fill-color: black; 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -150,6 +159,7 @@ header{
 
 /*********** Side Menu *************/
 .side-menu {
+<<<<<<< HEAD
   height: 80%;
   width: 20%;
   min-width: 200px;
@@ -158,6 +168,30 @@ header{
   left: 100%;
   background-color: #404040;
   background-size: cover; }
+=======
+	height: 95%;
+	width: 20%;
+	min-width: 200px;
+  padding: 10px;
+	z-index: 2;
+	position: absolute;
+	left: 100%;
+  opacity: 0.75;
+  line-height: 2;
+	background-color: #404040;
+	background-size: cover;
+  font-family: 'Questrial', sans-serif;
+}
+
+.side-menu h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.side-menu ul li {
+  font-size: 1.5em;
+}
+>>>>>>> 6a6620e3072d6ab9339ea809e6c7eb3347ad04d7
 
 /*:checked + .side-menu{
   transform: translateX(-100%);
@@ -179,10 +213,11 @@ header{
 /************ Footer **************/
 footer {
   height: 10%;
-  padding-top: 1.8%;
+  padding-top: 1%;
   width: 100%;
   background-color: #404040;
   border-top: 1px solid #FFF; }
+}
 
 .login {
   list-style-type: none;
@@ -272,6 +307,29 @@ footer {
 .menu_opener:checked ~ .menu_opener_label:before {
   transform: rotate(-45deg);
   margin-top: 1.2em; }
+
+.login{
+	list-style-type: none;
+	background-color: #fff;
+  padding: 0.5%;
+  border-radius: 5px;
+	margin-left: 49%;
+}
+
+.login a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.login a:hover {
+  color: red;
+}
+
+.wel_signin{
+	position: relative;
+	margin-top: 20%;
+}
 
 .menu_opener_label {
   background: #F9821B;
