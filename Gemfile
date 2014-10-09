@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 # Twilio gem for texting users
 gem 'twilio-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
