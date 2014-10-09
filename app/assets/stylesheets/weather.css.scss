@@ -111,11 +111,41 @@ header{
   position: relative;
   top: 20px;
   z-index: 2;
-  animation: cloud 50s linear infinite;
+  animation: cloud 10s linear infinite;
   -webkit-animation: cloud 10s linear infinite;
+  -moz-animation: cloud 10s linear infinite;
+  -ms-animation: cloud 10s linear infinite;
+  -o-animation: cloud 10s linear infinite;
 }
 
 @-webkit-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 10%;
+  }
+}
+
+@-moz-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 20%;
+  }
+}
+
+@-ms-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 20%;
+  }
+}
+
+@-o-keyframes cloud {
   0%, 100% {
     left: 0%;
   }
@@ -157,12 +187,13 @@ header{
 /********* Sun with Blue-Cloud Animation ****************/
 .sun{
   position: relative;
-  left: -320px;
-  top: -410px;
+  left: -255px;
+  top: -230px;
+  z-index: 2;
 }
 
 #Layer_sun{
-  width: 100%;
+  width: 300%;
 }
 .cloud-style-blue{
   fill: #64D6F5;
@@ -173,10 +204,13 @@ header{
 }
 .cloud2{
   position: relative;
-  top: -1210px;
-  z-index: 2;
-  animation: cloud 50s linear infinite;
+  top: -70px;
+  z-index: 3;
+  animation: cloud 10s linear infinite;
   -webkit-animation: cloud 10s linear infinite;
+  -moz-animation: cloud 10s linear infinite;
+  -ms-animation: cloud 10s linear infinite;
+  -o-animation: cloud 10s linear infinite;
 }
 
 @-webkit-keyframes cloud {
@@ -184,8 +218,34 @@ header{
     left: 0%;
   }
   50% {
+    left: 10%;
+  }
+}
+
+@-moz-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
     left: 3%;
-    fill: #878891;
+  }
+}
+
+@-ms-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 3%;
+  }
+}
+
+@-o-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 3%;
   }
 }
 
@@ -211,17 +271,6 @@ header{
 /*********** Side Menu *************/
 
 .side-menu {
-<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
-  height: 80%;
-  width: 20%;
-  min-width: 200px;
-  z-index: 3;
-  position: absolute;
-  top: 4.375em;
-  left: 100%;
-  background-color: #404040;
-  background-size: cover;
-=======
 	height: 100%;
 	width: 20%;
 	min-width: 200px;
@@ -231,12 +280,10 @@ header{
 	left: 100%;
 	background-color: #404040;
 	background-size: cover;
->>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
   opacity: 0.75;
 }
 
 .sm-options{
-<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
   color: white;
   position: relative;
   top: 10%;
@@ -249,13 +296,6 @@ header{
     line-height: 2;
     font-size: 1.5em;
   }
-=======
-	color: white;
-	position: relative;
-	top: 10%;
-	font-size: 1.0em;
-	opacity: 1.0;
->>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
 }
 
 h2{
@@ -270,15 +310,11 @@ font-size: 1.5em;
 /************ Footer **************/
 
 .login{
-<<<<<<< HEAD:app/assets/stylesheets/weather.css.scss
-  margin-left: 45%;
-=======
 	margin:17em 0 0 30em;
 	padding:.5em 6em;
 	background-color: #fff;
 	opacity: 20%;
 	color: black;
->>>>>>> d80bb0fb584e8c06233235c1b0fdd735d6d14eb1:app/assets/stylesheets/weather.scss
 }
 
 .logout{
