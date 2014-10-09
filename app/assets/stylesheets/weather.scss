@@ -194,13 +194,19 @@ footer {
   width: 17.7em;
 }
 
-.loginDE {
+.loginDER {
 	margin: 1em 0 1em 6em;
 	padding:.2em .4em;
 	border-radius: .5em;
 	background-color: #fff;
 	opacity: 20%;
 	border: .1em black;
+}
+
+.loginDE {
+	text-decoration: none;
+	color: black;
+
 }
 
 .loginDE a:hover{
@@ -251,7 +257,7 @@ footer {
   background: #F9821B;
   width: 2.9em;
   height: 2.9em;
-  margin-top: .1em;
+  margin-top: .6em;
   display: block;
   cursor: pointer;
   border-radius:50%;
@@ -289,7 +295,7 @@ footer {
    width: 1.4em;
    height: .3em; 
    position: absolute;
-   top: 1.35em;
+   top: 1.85em;
    left: 75.6em;
    background: #000; 
    z-index: 20;
