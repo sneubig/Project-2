@@ -18,6 +18,8 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :environment, :development
+set :output, 'tmp/whenever.log'
 
 every :hour do
   # Updates users and sends relevant messages
