@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 # Twilio gem for texting users
 gem 'twilio-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -16,6 +17,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+
+# Use whenever for task scheduling
+gem 'whenever', :require => false
 
 # Use httparty for api requests
 gem 'httparty'
