@@ -82,8 +82,6 @@ header{
   margin-right: 10%;
   width: 80%;
   height: 100%;
-/*  border-left: 1px solid white;
-  border-right: 1px solid white;*/
 } 
 
 /*********** SVG Animations *************/
@@ -91,7 +89,6 @@ header{
 .svg{
   width: 20%;
   height: 20%;
-  border: 1px solid black;
   position: relative;
   top: 10%;
   margin: 0 auto;
@@ -112,11 +109,41 @@ header{
   position: relative;
   top: 20px;
   z-index: 2;
-  animation: cloud 50s linear infinite;
+  animation: cloud 10s linear infinite;
   -webkit-animation: cloud 10s linear infinite;
+  -moz-animation: cloud 10s linear infinite;
+  -ms-animation: cloud 10s linear infinite;
+  -o-animation: cloud 10s linear infinite;
 }
 
 @-webkit-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 10%;
+  }
+}
+
+@-moz-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 20%;
+  }
+}
+
+@-ms-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 20%;
+  }
+}
+
+@-o-keyframes cloud {
   0%, 100% {
     left: 0%;
   }
@@ -159,7 +186,8 @@ header{
 .sun{
   position: relative;
   left: -320px;
-  top: -410px;
+  top: -580px;
+  z-index: 2;
 }
 
 #Layer_sun{
@@ -174,10 +202,13 @@ header{
 }
 .cloud2{
   position: relative;
-  top: -600px;
-  z-index: 2;
-  animation: cloud 50s linear infinite;
+  top: -70px;
+  z-index: 3;
+  animation: cloud 10s linear infinite;
   -webkit-animation: cloud 10s linear infinite;
+  -moz-animation: cloud 10s linear infinite;
+  -ms-animation: cloud 10s linear infinite;
+  -o-animation: cloud 10s linear infinite;
 }
 
 @-webkit-keyframes cloud {
@@ -185,8 +216,34 @@ header{
     left: 0%;
   }
   50% {
+    left: 10%;
+  }
+}
+
+@-moz-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
     left: 3%;
-    fill: #878891;
+  }
+}
+
+@-ms-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 3%;
+  }
+}
+
+@-o-keyframes cloud {
+  0%, 100% {
+    left: 0%;
+  }
+  50% {
+    left: 3%;
   }
 }
 
