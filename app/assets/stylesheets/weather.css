@@ -190,8 +190,6 @@ footer {
 .menu_opener {
   display: none; }
 
-.menu_opener:checked ~ .link_settings {
-  left: 4.063em; }
 .menu_opener:checked ~ .barre_hamburger {
   opacity: 0; }
 .menu_opener:checked ~ .menu_opener_label:after {
