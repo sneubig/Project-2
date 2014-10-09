@@ -373,3 +373,29 @@ ul li {
   z-index: 20;
   -webkit-transition: all .4s ease;
   transition: all .4s ease; }
+
+  .wel_wrapper {
+    text-align: center;
+    padding-top: 10%;
+  }
+  .wel_wrapper h1 {
+      color: #FFF;
+      font-size: 7em;
+    }
+
+  .wel_signin {
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    background-color: #4FBBE0;
+    text-align: center;
+  }
+
+  button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  button a:hover {
+    color: #000;
+  }
